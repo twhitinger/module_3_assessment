@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
 
   get "/search", to: "search#index"
+  get "/stores/:id", to: "search#show", as: :store
 end

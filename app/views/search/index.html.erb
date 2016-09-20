@@ -10,7 +10,7 @@
 
   <% @stores.stores.each do |store| %>
    <tr class= "store">
-     <td><%= store.longName %></td>
+     <td><%= link_to store.longName, "/stores/#{store.storeId}" %></td>
      <td><%= store.city %></td>
      <td><%= store.phone %></td>
      <td><%= store.distance %></td>
