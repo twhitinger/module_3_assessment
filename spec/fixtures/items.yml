@@ -1,0 +1,20 @@
+one:
+  name: item_one
+  description: discription_one
+  image_url: image_url_one
+  created_at: created_at
+  updated_at: updated_at
+
+two:
+  name: item_two
+  description: discription_two
+  image_url:  image_url_two
+  created_at: created_at
+  updated_at: updated_at
+
+  three:
+    name: item_three
+    description: discription_three
+    image_url:  image_url_three
+    created_at: created_at
+    updated_at: updated_at
