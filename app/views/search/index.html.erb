@@ -1,1 +1,20 @@
-:)
+<table class = "search_results">
+  <tr>
+    <th><%= "#{@stores.total} Total Stores" %></th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Phone Number</th>
+    <th>Distance</th>
+    <th>Store Type</th>
+  </tr>
+
+  <% @stores.stores.each do |store| %>
+   <tr class= "store">
+     <td><%= store.longName %></td>
+     <td><%= store.city %></td>
+     <td><%= store.phone %></td>
+     <td><%= store.distance %></td>
+     <td><%= store.storeType %></td>
+   </tr>
+   <% end %>
+</table>

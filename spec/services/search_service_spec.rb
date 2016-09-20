@@ -10,10 +10,10 @@ describe SearchService do
 
 
         expect(stores.total).to eq 17
-        expect(stores.stores.last.longName).to eq("Best Buy - Littleton")
-        expect(stores.stores.last.city).to eq("Littleton")
-        expect(stores.stores.last.phone).to eq("303-932-7830")
-        expect(stores.stores.last.distance).to eq(10.45)
+        expect(stores.stores.last.longName).to eq("Best Buy - S.E. Aurora")
+        expect(stores.stores.last.city).to eq("Aurora")
+        expect(stores.stores.last.phone).to eq("303-693-0166")
+        expect(stores.stores.last.distance).to eq(18.51)
         expect(stores.stores.last.storeType).to eq("BigBox")
       end
     end

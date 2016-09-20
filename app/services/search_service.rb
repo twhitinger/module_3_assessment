@@ -11,6 +11,7 @@ class SearchService
       req.params['apiKey'] = ENV["BEST_BUY_KEY"]
       req.params['format'] = "json"
       req.params['show'] = "longName,city,distance,phone,storeType,storeId"
+      req.params['pageSize'] = 15
     end
      parse(response)
   end
@@ -21,6 +22,7 @@ class SearchService
     req.params['show'] = "longName,address,city,region,postalCode,storeType"
     req.params['apiKey'] = ENV["BEST_BUY_KEY"]
     req.params['format'] = "json"
+
     end
     parsed = parse(response)
   end
