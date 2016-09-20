@@ -4,8 +4,6 @@ RSpec.feature "user can find stores by zip code" do
   describe "user enters a valid zip" do
     scenario "they see a list of 15 stores within 25 mile radius" do
       VCR.use_cassette("zip_feature") do
-    #  As a user
-    # When I visit "/"
         visit "/"
   # And I fill in a search box with "80202" and click "search"
         fill_in "zip", with: "80202"

@@ -7,8 +7,14 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <%= form_tag :search, method: :get, class: "form-inline" do %>
+            <div class="form-group search-field">
+              <%= text_field_tag :zip, "Search by zip...", class: "form-control" %>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+
+            </div>
+          <% end %>
     <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>
-
