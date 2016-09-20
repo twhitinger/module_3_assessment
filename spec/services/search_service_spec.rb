@@ -21,21 +21,18 @@ describe SearchService do
   context "#id" do
     it "find the store with the given id" do
       VCR.use_cassette("id_search") do
-#         As a user
-# After I have searched a zip code for stores
-# When I click the name of a store
-# Then my current path should be "/stores/:store_id"
-    id = "210"
-    service = SearchService.new
-    store = service.find_store(id)
-# I should see the store name, store type and address with city, state and zip
-    expect(store.total).to eq 1
-    expect(store.longName).to eq("Best Buy Mobile - Cherry Creek Shopping Center")
-    expect(store.address).to eq("")
-    expect(store.city).to eq("Denver")
-    expext(store.region).to eq("CO")
-    expect(store.postalCode).to eq("")
-    expect(store.storeType).to eq("Mobile")
+        id = "2740"
+        service = SearchService.new
+        store = service.find_store(id)
+
+        # I should see the store name, store type and address with city, state and zip
+        expect(store.total).to eq 1
+        expect(store.stores.first.longName).to eq("Best Buy Mobile - Cherry Creek Shopping Center")
+        expect(store.stores.first.address).to eq("3000 East First Ave")
+        expect(store.stores.first.city).to eq("Denver")
+        expect(store.stores.first.region).to eq("CO")
+        expect(store.stores.first.postalCode).to eq("80206")
+        expect(store.stores.first.storeType).to eq("Mobile")
       end
     end
   end

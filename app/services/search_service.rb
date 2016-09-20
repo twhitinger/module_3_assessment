@@ -12,7 +12,6 @@ class SearchService
       req.params['format'] = "json"
       req.params['show'] = "longName,city,distance,phone,storeType,storeId"
     end
-    binding.pry
      parse(response)
   end
 
@@ -21,9 +20,9 @@ class SearchService
     req.url "/v1/stores(storeId=#{id})"
     req.params['show'] = "longName,address,city,region,postalCode,storeType"
     req.params['apiKey'] = ENV["BEST_BUY_KEY"]
+    req.params['format'] = "json"
     end
     parsed = parse(response)
-    binding.pry
   end
 
   def parse(response)
