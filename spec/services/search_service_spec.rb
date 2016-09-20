@@ -5,14 +5,17 @@ describe SearchService do
     it "returns stores within 25 miles of a given zip" do
       VCR.use_cassette("zip_search") do
         zip = "80202"
-        stores = SearchService.new.get_stores(zip)
+        service = SearchService.new
+        stores = service.find_stores(zip)
 
-        expect(stores["total"]).to eq 17
-        expect(stores["stores"].first["longName"]).to eq "Best Buy Mobile - Cherry Creek Shopping Center"
-        expect(stores["stores"].first["city"]).to eq "Denver"
-        expect(stores["stores"].first["phone"]).to eq "303-270-9189"
-        expect(stores["stores"].first["distance"]).to eq 3.25
-        expect(stores["stores"].first["storeType"]).to eq "Mobile"
+
+        expect(stores.total).to eq 17
+        expect(stores.stores.last.longName).to eq("Best Buy - Littleton")
+        expect(stores.stores.last.city).to eq("Littleton")
+        expect(stores.stores.last.phone).to eq("303-932-7830")
+        expect(stores.stores.last.distance).to eq(10.45)
+        expect(stores.stores.last.storeType).to eq("BigBox")
       end
     end
   end
+end

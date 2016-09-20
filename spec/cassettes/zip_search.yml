@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=ru99w3xp6qu5848qvbgrznxq&format=json&show=longName,city,distance,phone,storeType,storeId
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 20 Sep 2016 16:25:23 GMT
+      Server:
+      - thin 1.6.1 codename Death Proof
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1d-113.mashery.com
+      Content-Length:
+      - '2294'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "from": 1,
+          "to": 10,
+          "total": 17,
+          "currentPage": 1,
+          "totalPages": 2,
+          "queryTime": "0.005",
+          "totalTime": "0.014",
+          "partial": false,
+          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=longName,city,distance,phone,storeType,storeId&format=json&apiKey=ru99w3xp6qu5848qvbgrznxq",
+          "stores": [
+            {
+              "longName": "Best Buy Mobile - Cherry Creek Shopping Center",
+              "city": "Denver",
+              "distance": 3.25,
+              "phone": "303-270-9189",
+              "storeType": "Mobile",
+              "storeId": 2740
+            },
+            {
+              "longName": "Best Buy - Belmar",
+              "city": "Lakewood",
+              "distance": 5.28,
+              "phone": "303-742-8039",
+              "storeType": "BigBox",
+              "storeId": 1224
+            },
+            {
+              "longName": "Best Buy - Colorado Blvd",
+              "city": "Denver",
+              "distance": 5.61,
+              "phone": "303-758-5805",
+              "storeType": "BigBox",
+              "storeId": 211
+            },
+            {
+              "longName": "Best Buy - Denver West",
+              "city": "Lakewood",
+              "distance": 8.38,
+              "phone": "303-273-5617",
+              "storeType": "BigBox",
+              "storeId": 382
+            },
+            {
+              "longName": "Best Buy - Westminster",
+              "city": "Westminster",
+              "distance": 8.54,
+              "phone": "303-426-4434",
+              "storeType": "BigBox",
+              "storeId": 209
+            },
+            {
+              "longName": "Best Buy Mobile - Colorado Mills",
+              "city": "Lakewood",
+              "distance": 8.59,
+              "phone": "303-278-0601",
+              "storeType": "Mobile",
+              "storeId": 2737
+            },
+            {
+              "longName": "Best Buy - Northglenn",
+              "city": "Denver",
+              "distance": 9.12,
+              "phone": "303-252-8677",
+              "storeType": "BigBox",
+              "storeId": 1416
+            },
+            {
+              "longName": "Best Buy Mobile - Town Center at Aurora",
+              "city": "Aurora",
+              "distance": 9.66,
+              "phone": "303-326-0848",
+              "storeType": "Mobile",
+              "storeId": 2730
+            },
+            {
+              "longName": "Best Buy - Aurora",
+              "city": "Aurora",
+              "distance": 9.83,
+              "phone": "303-338-5797",
+              "storeType": "BigBox",
+              "storeId": 217
+            },
+            {
+              "longName": "Best Buy - Littleton",
+              "city": "Littleton",
+              "distance": 10.45,
+              "phone": "303-932-7830",
+              "storeType": "BigBox",
+              "storeId": 210
+            }
+          ],
+          "warnings": "Distances are in terms of miles (default)"
+        }
+    http_version: 
+  recorded_at: Tue, 20 Sep 2016 16:25:23 GMT
+recorded_with: VCR 3.0.3
