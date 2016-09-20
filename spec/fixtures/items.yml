@@ -5,6 +5,7 @@ one:
   image_url: First_image_url
   created_at: created_at
   updated_at: updated_at
+  id: 1
 
 two:
   name: Second_Item
