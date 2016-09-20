@@ -13,7 +13,17 @@ class SearchService
       req.params['show'] = "longName,city,distance,phone,storeType,storeId"
     end
     binding.pry
+     parse(response)
+  end
+
+  def find_store(id)
+    response = connection.get do |req|
+    req.url "/v1/stores(storeId=#{id})"
+    req.params['show'] = "longName,address,city,region,postalCode,storeType"
+    req.params['apiKey'] = ENV["BEST_BUY_KEY"]
+    end
     parsed = parse(response)
+    binding.pry
   end
 
   def parse(response)
