@@ -10,11 +10,11 @@ RSpec.describe Api::V1::ItemsController, type: :request do
 
       items = JSON.parse(response.body)
       item = items.first
-      expect(items.count).to eq 3
+      expect(items.count).to eq 2
       #  And each item has an id, name, description, and image_url but not the created_at or updated_at
-      expect(item["name"]).to eq("item_one")
-      expect(item["description"]).to eq("description_one")
-      expect(item["image_url"]).to eq("image_url_one")
+      expect(item["name"]).to eq("Second_Item")
+      expect(item["description"]).to eq("Second_Description")
+      expect(item["image_url"]).to eq("Second_image_url")
       expect(item["created_at"]).to eq(nil)
       expect(item["updated_at"]).to eq(nil)
       # When I send a GET request to /api/v1/items/1 I receive a 200 JSON response containing the id, name, description, and image_url but not the created_at or updated_at

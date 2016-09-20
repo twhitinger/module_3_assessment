@@ -1,20 +1,14 @@
+
 one:
-  name: item_one
-  description: discription_one
-  image_url: image_url_one
+  name: First_Item
+  description: First_Description
+  image_url: First_image_url
   created_at: created_at
   updated_at: updated_at
 
 two:
-  name: item_two
-  description: discription_two
-  image_url:  image_url_two
+  name: Second_Item
+  description: Second_Description
+  image_url: Second_image_url
   created_at: created_at
   updated_at: updated_at
-
-  three:
-    name: item_three
-    description: discription_three
-    image_url:  image_url_three
-    created_at: created_at
-    updated_at: updated_at
